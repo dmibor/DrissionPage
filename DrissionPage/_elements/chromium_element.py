@@ -1170,7 +1170,7 @@ class ShadowRoot(BaseElement):
 
                 else:
                     nod_ids = self.owner.run_cdp('DOM.querySelectorAll',
-                                                 nodeId=self._node_id, selector=loc[1])['nodeId']
+                                                 nodeId=self._node_id, selector=loc[1])['nodeIds']
                     r = make_chromium_eles(self.owner, _ids=nod_ids, index=index, is_obj_id=False)
                     return None if r is False else r
 
